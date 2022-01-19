@@ -1,0 +1,90 @@
+<html lang="ja">
+<head>
+  <link rel="stylesheet" href="css/add_img.css">
+  <link rel="stylesheet" href="css/button.css">
+</head>
+<div class="a">
+  <header class="header">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/add_map.css">
+    <link rel="stylesheet" type="text/css" href="css/select.css">
+    <link rel="stylesheet" href="css/button.css">
+  </header>
+  <div class="top">
+    <main class="main">
+       <img id = "add_map_for_map_img" src="map/map4.jpg" alt="img">
+    </main>
+    <aside id = "side_1" class="side">
+      <div class="button03">
+        <a href="index.html">back</a>
+      </div>
+      <div class="button03">
+        <a href="javascript:save()">save</a>
+      </div>
+    </aside>
+    <div class="sub">
+      <div class="stuff">
+        <div class="textBox">
+          <input 
+          class="text" 
+          type="textbox"
+          id="map_name"
+          placeholder="Img Name"
+          onkeyup="this.setAttribute('value', this.value);"
+          value=""/>
+          <label class="label">Img Name</label>
+          <label class="error"></label>
+        </div>
+      </div>
+      <div class="button03">
+        <a href="javascript:load_map()">Load</a>
+      </div>
+
+      <div class="stuff">
+        <div class="textBox">
+          <input 
+          class="text" 
+          type="textbox"
+          id="map_name"
+          placeholder="Map Name"
+          onkeyup="this.setAttribute('value', this.value);"
+          value=""/>
+          <label class="label">Map Name</label>
+          <label class="error"></label>
+        </div>
+      </div>
+
+      <div class="button03">
+        <a href="javascript:add_map()">Add</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>登録済みのMAP</p>
+    <div class="grid" id = "grid_map">
+      <div class="item">
+        <img src="map/map1.jpg" alt="img">
+        <p>日本橋口</p>
+      </div>
+      <div class="item">
+        <img src="map/map2.jpg" alt="img">
+        <p>中央口</p>
+      </div>
+      <div class="item">
+        <img src="map/map3.jpg" alt="img">
+        <p>マクドナルド</p>
+      </div>
+      <div class="item">
+        <img src="map/map4.jpg" alt="img">
+        <p>八重洲</p>
+      </div>
+      <div class="item">
+        <img src="map/map5.jpg" alt="img">
+        <p>適当</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="js/add_map.js"></script>

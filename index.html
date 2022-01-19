@@ -1,0 +1,103 @@
+<html lang="ja">
+<div class="a">
+  <header class="header">
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/select.css">
+  <link rel="stylesheet" href="css/button.css">
+  </header>
+  <div class="top">
+    <main class="main">
+      <div id="map_base" >
+        <img id = "map_img" alt ="" cman0Mat="movearea"></img>
+      </div>
+    </main>
+    <aside id = "side_1" class="side">
+      <div class="button03">
+      <a href="javascript:OnButtonClick();">annotation</a>
+      </div>
+    </aside>
+    <div class="sub">
+      MAPの選択
+      <form name="ad" class="cp_ipselect cp_sl01">
+        <select name="myselect" required id="change_js">
+        </select>
+      </form>
+      <div class="button03">
+      <a href="add_map.html">add_map</a>
+      </div>
+      <br>
+      <div class="button03">
+      <a href="add_img.html">add_img</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+   <iframe id="exampleIframe" allowfullscreen="yes" frameborder="0" scrolling="no" allowvr="yes" src=""></iframe>
+ </div>
+</div>
+
+
+
+<script language="javascript" type="text/javascript">
+        function OnButtonClick() {
+          triggar_iframe();
+          var tmp_src=document.getElementById('exampleIframe').src;
+          if(tmp_src.split("&")[1]=="ann=0"){
+          document.getElementById('exampleIframe').src=tmp_src.split("&")[0]+"&ann=1&x="+tmp_xyz[0]+"&y="+tmp_xyz[1]+"&z="+tmp_xyz[2]+"&zoom="+tmp_xyz[3];
+          }
+          else if(tmp_src.split("&")[1]=="ann=1"){
+          document.getElementById('exampleIframe').src=tmp_src.split("&")[0]+"&ann=0&x="+tmp_xyz[0]+"&y="+tmp_xyz[1]+"&z="+tmp_xyz[2]+"&zoom="+tmp_xyz[3];
+          }
+        }
+    </script>
+
+
+
+
+<script type="text/javascript" src="js/set_map.js"></script>
+
+
+<!--　
+　　　map_baseに子要素を追加する処理
+　　　jsonファイルを読み込んで追加する．
+-->
+<script>
+ window.feed_callback = function(results) {
+  for (var i = 0; i < results.features.length; i++) {
+    var coords = results.features[i];
+    addNote(coords.x,coords.y,coords.img);
+  }
+}
+function addNote(x,y,name) {
+  let elm = document.createElement('div');
+  elm.className = 'note';
+  elm.style.top = y+'%';
+  elm.style.left = x+'%';
+  let elm_mark = document.createElement('span');
+  elm_mark.className = 'mark';
+  elm_mark.img_name = name.split(".")[0];
+  let elm_name = document.createElement('span');
+  elm_name.className = 'camera_name';
+  elm_name.textContent = "camera"+name.split(".")[0];
+
+  elm_mark.onclick = function () {
+    document.getElementById('exampleIframe').src="tmp_img.html?num="+elm_mark.img_name+"&ann=0&x=0&y=0&z=1&zoom=70";
+  }
+  elm.appendChild(elm_mark);
+  elm.appendChild(elm_name);
+  document.getElementById('map_base').appendChild(elm);
+}
+
+</script>
+
+<script>
+  var tmp_xyz =[]
+  function setCameraDir(x,y,z,zoom){
+    tmp_xyz=[x,y,z,zoom];
+  }
+
+  function triggar_iframe(){
+    document.getElementById("exampleIframe").contentWindow.getCameraDir();
+  }
+</script>

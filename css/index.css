@@ -1,0 +1,98 @@
+
+.a{
+  width: 90%;
+  height : 95%;
+  margin: 0 auto;
+}
+.main{
+  position: relative;
+  float: left;
+  width: 72%;
+  padding: 10px;
+  background-color: #fff09e;
+  order: 2;
+}
+
+.side{
+  width: 22%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #EFFFDE;
+  order: 3;
+}
+
+.sub{
+  width: 22%;
+  margin: 0 auto;
+  padding: 10px;
+  order: 1;
+  background-color: #EFFFDE;
+}
+
+.footer{
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  height: 70%;
+  background-color: #ffce5b;
+}
+
+.footer iframe{
+  position:relative;
+  top:0;
+  left:0;
+  width:80%;
+  height:100%;
+}
+
+.top{
+  display: flex;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#map_base {
+  position:relative;
+  max-width:40%;
+  top:0;
+  left:25%;
+}
+#map_base  img {
+  max-width:100%;
+  pointer-events:none;
+}
+.note {
+  position:absolute;
+}
+
+.note span.mark {
+  display:inline-block;
+  position:absolute;
+  top:-0.3em;
+  left:-0.3em;
+  cursor:pointer;
+  border-radius:50%;
+  width:0.3em;
+  height:0.3em;
+  background-color:red;
+}
+
+.note span.camera_name {
+  display:none;
+  position:absolute;
+  right:-3em;
+  top:1em;
+  padding: 2px;
+  color: aliceblue;
+  border-radius: 5px;
+  background-color:purple;
+  width:6em;
+  font-size: 12px;
+  text-align: center;
+}
+
+.note:hover span.camera_name {
+  display: inline;
+}
+

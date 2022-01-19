@@ -1,0 +1,33 @@
+.button03 a {
+  position:relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+  width: 80%;
+  color: #2285b1;
+  font-size: 50%;
+  font-weight: 700;
+  border: 2px solid #2285b1;
+}
+
+.button03 a::after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-top: 3px solid #2285b1;
+  border-right: 3px solid #2285b1;
+  transform: rotate(45deg);
+}
+
+.button03 a:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #a0c4d3;
+}
+
+.button03 a:hover::after {
+  border-top: 3px solid #333333;
+  border-right: 3px solid #333333;
+}

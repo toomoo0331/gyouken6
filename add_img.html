@@ -1,0 +1,69 @@
+<!-- https://blog.ver001.com/javascript-move-element/ -->
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <link rel="stylesheet" href="css/add_img.css">
+  <link rel="stylesheet" href="css/button.css">
+</head>
+<body>
+  <html lang="ja">
+  <div class="a">
+    <header class="header">
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" type="text/css" href="css/add_map.css">
+      <link rel="stylesheet" type="text/css" href="css/select.css">
+      <link rel="stylesheet" href="css/button.css">
+    </header>
+    <div class="top">
+      <main class="main">
+        <iframe id="exampleIframe" allowfullscreen="yes" frameborder="0"
+        scrolling="no" allowvr="yes" src="tmp_img.html?num=0&ann=0&x=0&y=0&z=1&zoom=70"></iframe>
+      </main>
+      <aside id = "side_1" class="side">
+      <form name="ad" class="cp_ipselect cp_sl01">
+        <select name="myselect" required id="change_js">
+        </select>
+      </form>
+        <div class="button03">
+          <a href="index.html">back</a>
+        </div>
+        <div class="button03">
+          <a href="javascript:save();">save</a>
+        </div>
+      </aside>
+      <div class="sub">
+        <div class="stuff">
+          <div class="textBox">
+            <input 
+            class="text" 
+            type="textbox"
+            id = "image_name"
+            placeholder="Image Name"
+            onkeyup="this.setAttribute('value', this.value);"
+            value=""/>
+            <label class="label">Image Name</label>
+            <label class="error"></label>
+          </div>
+        </div>
+        <div class="button03">
+          <a href="javascript:load_img();">load</a>
+        </div>
+        <div class="button03">
+          <a href="javascript:add_img();">add</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div id="map_base">
+        <img id = "map_img" alt="" >
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="js/add_img.js"></script>
+<script type="text/javascript" src="js/set_map.js"></script>
