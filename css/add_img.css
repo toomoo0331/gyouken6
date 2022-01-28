@@ -2,7 +2,7 @@
 	position:relative;
   top:0;
   left:0;
-	max-width:50%;
+	max-width:100%;
 }
 #map_base > img {
 	max-width:100%;

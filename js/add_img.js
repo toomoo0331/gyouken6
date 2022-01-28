@@ -32,6 +32,7 @@ function fileChanged(input){
       huga = JSON.parse(reader.result);
   }
 }
+}
 
 //jsonファイルの保存
 function save(){
@@ -41,7 +42,7 @@ function save(){
       "num":i,
       "x":Number(document.querySelectorAll("div.note")[i]["style"]["left"].slice(0,-1)),
       "y":Number(document.querySelectorAll("div.note")[i]["style"]["top"].slice(0,-1))
-    }
+      }
     obj.push(tmp);
   }
   let hugastring = JSON.stringify(obj);
@@ -95,7 +96,6 @@ function addNote(x,y,comment=null)
   let elm_mark = document.createElement('span');
   elm_mark.className = 'mark';
 
-
   let elm_remove = document.createElement('span');
   elm_remove.className = 'remove';
   elm_remove.textContent = 'x';
@@ -127,4 +127,4 @@ function addNote(x,y,comment=null)
   elm.appendChild(elm_text);
   elm.appendChild(elm_remove);
   document.getElementById('map_base').appendChild(elm);
-};
+}
