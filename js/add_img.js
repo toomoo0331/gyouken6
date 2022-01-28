@@ -13,8 +13,7 @@ function add_img(){
   if(bool_addImg){
     const textbox = document.getElementById("image_name");
     const inputValue = textbox.value;
-    const words = inputValue.split('.');
-    addNote(10,10,120,22,words[0]);
+    addNote(10,10,inputValue);
   }
   bool_addImg=Boolean("");
 }

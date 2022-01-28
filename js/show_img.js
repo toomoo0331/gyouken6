@@ -1,13 +1,3 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <script type="text/javascript" src="js/three.min.js"></script>
-  <script type="text/javascript" src="js/thview.js"></script>
-</head>
-
-<div class = "image">
-<div id="image-1">
-<script type="text/javascript" >  
   var url = new URL(window.location.href);
 
   var params = url.searchParams;
@@ -57,6 +47,3 @@
     }
     return [tmp_theta,tmp_phai];
   }
-  </script>
-  </div>
-</div>

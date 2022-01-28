@@ -2,7 +2,7 @@
 //アノテーションボタンを押したときの処理
 //triggar_iframe()で，視点の方向を取得する．
 var tmp_xyz =[]
-function OnButtonClick() {
+function OnButtonClick_ann() {
   triggar_iframe();
   var tmp_src=document.getElementById('exampleIframe').src;
   if(tmp_src.split("&")[1]=="ann=0"){
@@ -29,5 +29,11 @@ function setCameraDir(x,y,z,zoom){
 //show_map.jsから呼ばれる関数
 //カメラを選択した時に，360度画像が変更されるようにする．
 function set_img(value){
-  document.getElementById('exampleIframe').src=value;
+  document.getElementById('exampleIframe').src="show_img.html?num="+value+"&ann=0&x=0&y=0&z=1&zoom=70";
+}
+
+
+//Find stepladderボタンを押したときの処理
+function OnButtonClick_findstep(){
+
 }

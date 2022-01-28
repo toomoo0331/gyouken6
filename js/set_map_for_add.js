@@ -12,13 +12,11 @@
     var script = document.createElement('script');
     script.src = "json/select_box.json";
     document.getElementsByTagName('head')[0].appendChild(script);
-    console.log("asdfa");
-    console.log(document.getElementsByTagName('head')[0]);
   }
 
 window.feed_select = function(results) {
   document["ad"]["myselect"].length = results.features.length+1;
-  document["ad"]["myselect"].options[0].text = "選ぶ";
+  document["ad"]["myselect"].options[0].text = "Select Map";
   document["ad"]["myselect"].options[0].value ="";
   for (var i = 1; i < results.features.length+1; i++) {
     var coords = results.features[i-1];

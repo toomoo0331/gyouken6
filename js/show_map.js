@@ -35,7 +35,6 @@
 　
 //map_baseに子要素を追加する処理
 //jsonファイルを読み込んで追加する．
-
  window.feed_callback = function(results) {
   for (var i = 0; i < results.features.length; i++) {
     var coords = results.features[i];
@@ -55,7 +54,7 @@ function addNote(x,y,name) {
   elm_name.textContent = "camera"+name.split(".")[0];
 
   elm_mark.onclick = function () {
-    window.parent.set_img("tmp_img.html?num="+elm_mark.img_name+"&ann=0&x=0&y=0&z=1&zoom=70");
+    window.parent.set_img(elm_mark.img_name);
   }
   elm.appendChild(elm_mark);
   elm.appendChild(elm_name);
