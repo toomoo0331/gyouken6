@@ -1,4 +1,3 @@
-
 // 　　　画面ロード時の処理
 // 　　　map変更時に常にmap_baseの子要素を削除するため，
 // 　　　初期値としてmap1を読み込み子要素を用意しておく 
@@ -26,7 +25,7 @@ window.feed_select = function(results) {
 }
 
 
-// 　　　map更新時の処理
+// map更新時の処理
 const selected = document.getElementById("change_js");
   selected.onchange = function() {
     document.getElementById("Iframe_map").contentWindow.change_map(selected.value)

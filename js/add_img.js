@@ -1,5 +1,7 @@
 var bool_addImg = Boolean("");
 
+//テキストボックスに記入した画像ファイルをmainに表示する．
+//表示した後，add出来るようにbool_addImgをtrueにする．
 function load_img(){
   const textbox = document.getElementById("image_name");
   const inputValue = textbox.value;
@@ -9,6 +11,8 @@ function load_img(){
   bool_addImg=Boolean("true");
 }
 
+//テキストボックスに記入してある画像ファイルをマップに追加する処理
+//追加後，誤り防止のためbool_addImgをfalse("")にする．
 function add_img(){
   if(bool_addImg){
     const textbox = document.getElementById("image_name");

@@ -1,5 +1,3 @@
-
-  
 // 　　　map更新時の処理
 // 　　　map_baseの子要素を削除したうえで
 // 　　　set_map()で新たに子要素を追加する．
@@ -24,14 +22,6 @@
     return map_for_addimg;
   }
 
-  window.feed_callback = function(results) {
-  for (var i = 0; i < results.features.length; i++) {
-    var coords = results.features[i];
-    addNote(coords.x,coords.y,coords.img);
-  }
-}
-
-
 　
 //map_baseに子要素を追加する処理
 //jsonファイルを読み込んで追加する．
@@ -54,7 +44,7 @@ function addNote(x,y,name) {
   elm_name.textContent = "camera"+name.split(".")[0];
 
   elm_mark.onclick = function () {
-    window.parent.set_img(elm_mark.img_name);
+    window.parent.set_img(elm_mark.img_name,x,y);
   }
   elm.appendChild(elm_mark);
   elm.appendChild(elm_name);
